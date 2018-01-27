@@ -1,9 +1,9 @@
 # Twitter Search Engine
-This project is a lightweight alternative to Twitter's search. It demonstrates how to construct an *express* app, use Twitter Search API use client - server routings.
+This project is a lightweight alternative to Twitter's search. It demonstrates how to construct an *express* app, use Twitter Search API and client - server routings.
 
 Keywords: *NodeJS*, *express*, *Semantic UI*, *async*, *es6*, *babel*, *eslint*, *jQuery*
 
-It is assumed that you already have *node* and *npm*. If you do not have them, you can check the links below for instructions:
+It is assumed that you already have *node* and *npm*. If you do not have them, you can check the link below for instructions:
 
 * [npm - NodeJS](https://www.npmjs.com/get-npm)
 
@@ -13,7 +13,6 @@ In order to start the app you will do the following:
 cd twitterSearchEngine
 npm install
 npm start
-
 ```
 
 After that navigate to **http://localhost:3000/**
