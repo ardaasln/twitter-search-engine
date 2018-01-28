@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "build": "babel src -d dist",
-    "start": "nodemon src/bin/www --exec babel-node",
+    "start": "babel-node src/bin/www --exec",
+    "devstart": "nodemon src/bin/www --exec babel-node",
     "serve": "node dist/bin/www",
     "lintit": "eslint --fix src",
     "test": "echo \"Error: no test specified\" && exit 1"
