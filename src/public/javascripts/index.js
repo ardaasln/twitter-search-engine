@@ -11,6 +11,11 @@ $(function() {
     }
     let parameters = {inputValue: input};
     $.post('/search', parameters, (data) => {
+      if (data.tweets.length === 0) {
+        $('#tweetTable').hide();
+        $('#statistics').hide();
+        return;
+      }
       $('#tweetTable tbody tr').remove();
       let rowNumber = 1;
       for (tweet of data.tweets) {

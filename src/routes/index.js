@@ -22,14 +22,14 @@ router.post('/search', function(req, res, next) {
       let tweets = results[0];
       let hashtagMap = twitter.populateHashtagMap(tweets);
       let textArray = twitter.fetchTextsOfTweets(tweets);
-      let topTenMap = [];
+      let topTenArr = [];
       for (let hashtag in hashtagMap) {
-        topTenMap.push([hashtag, hashtagMap[hashtag]]);
+        topTenArr.push([hashtag, hashtagMap[hashtag]]);
       }
-      topTenMap.sort((a, b) => {
+      topTenArr.sort((a, b) => {
         return b[1] - a[1];
       });
-      let response = {'tweets': textArray, 'hashtags': topTenMap.splice(0, 10)};
+      let response = {'tweets': textArray, 'hashtags': topTenArr.splice(0, 10)};
       res.send(response);
     } else {
       console.error('Error in Twitter Search API');
